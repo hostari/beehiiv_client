@@ -1,0 +1,27 @@
+{
+  "data": {
+    "id": "sub_00000000-0000-0000-0000-000000000000",
+    "email": "example@example.com",
+    "status": "validating",
+    "created": 1666800076,
+    "subscription_tier": "free",
+    "utm_source": "Twitter",
+    "utm_medium": "organic",
+    "utm_channel": "",
+    "utm_campaign": "string",
+    "referring_site": "https://www.blog.com",
+    "referral_code": "string",
+    "custom_fields": [
+      {
+        "name": "string",
+        "kind": "string",
+        "value": "string"
+      }
+    ],
+    "stats": {
+      "emails_received": 25,
+      "open_rate": 60.1,
+      "click_through_rate": 25
+    }
+  }
+}

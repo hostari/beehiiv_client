@@ -1,0 +1,13 @@
+{
+  "data": [
+    {
+      "id": "pub_00000000-0000-0000-0000-000000000000",
+      "name": "The Daily Letter",
+      "referral_program_enabled": false
+    }
+  ],
+  "limit": 10,
+  "page": 1,
+  "total_results": 1,
+  "total_pages": 1
+}

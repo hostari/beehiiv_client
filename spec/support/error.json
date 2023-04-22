@@ -1,0 +1,10 @@
+{
+  "status": "400",
+  "statusText": "bad_request",
+  "errors": [
+    {
+      "message": "Email is invalid",
+      "code": "INVALID_EMAIL"
+    }
+  ]
+}

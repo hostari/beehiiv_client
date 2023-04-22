@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "id": "mile_00000000-0000-0000-0000-000000000000",
+      "auto_fulfill": true,
+      "num_referrals": 0,
+      "reward": {
+        "id": "rew_00000000-0000-0000-0000-000000000000",
+        "name": "string",
+        "description": "string",
+        "image_url": "string",
+        "type": "physical"
+      }
+    }
+  ],
+  "limit": 0,
+  "page": 1,
+  "total_results": 0,
+  "total_pages": 0
+}

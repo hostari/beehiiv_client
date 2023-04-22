@@ -1,0 +1,24 @@
+{
+  "id": "sub_00000000-0000-0000-0000-000000000000",
+  "email": "example@example.com",
+  "status": "active",
+  "created": "1666793673",
+  "subscription_tier": "string",
+  "source": "string",
+  "medium": "string",
+  "channel": "string",
+  "embed_name": "string",
+  "referring_site": "string",
+  "stats": {
+    "emails_received": "string",
+    "open_rate": 0,
+    "click_through_rate": 0
+  },
+  "custom_fields": [
+    {
+      "name": "string",
+      "type": "string",
+      "value": "string"
+    }
+  ]
+}

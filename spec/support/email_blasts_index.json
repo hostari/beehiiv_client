@@ -1,0 +1,42 @@
+{
+  "data": [
+    {
+      "id": "blast_00000000-0000-0000-0000-000000000000",
+      "created": 1666800076,
+      "status": "inactive",
+      "subject_line": "Check this out",
+      "preview_text": "More news on the horizon",
+      "stats": {
+        "email": {
+          "recipients": 0,
+          "opens": 0,
+          "unique_opens": 0,
+          "open_rate": 0,
+          "clicks": 0,
+          "unique_clicks": 0,
+          "click_rate": 0,
+          "unsubscribes": 0,
+          "spam_reports": 0
+        },
+        "clicks": [
+          {
+            "url": "string",
+            "total_clicks": 10,
+            "total_unique_clicks": 8,
+            "total_click_through_rate": 30
+          }
+        ]
+      },
+      "content": {
+        "email": {
+          "free": "<HTML><body><h1>New Email Blast</h1></body></HTML>",
+          "premium": "<HTML><body><h1>New Email Blast</h1></body></HTML>"
+        }
+      }
+    }
+  ],
+  "limit": 0,
+  "page": 1,
+  "total_results": 0,
+  "total_pages": 0
+}

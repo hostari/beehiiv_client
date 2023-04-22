@@ -1,0 +1,11 @@
+{
+  "free": {
+    "web": "<HTML><body><h1>New Post</h1></body></HTML>",
+    "email": "<HTML><body><h1>New Post</h1></body></HTML>",
+    "rss": "<HTML><body><h1>New Post</h1></body></HTML>"
+  },
+  "premium": {
+    "web": "<HTML><body><h1>New Post</h1></body></HTML>",
+    "email": "<HTML><body><h1>New Post</h1></body></HTML>"
+  }
+}

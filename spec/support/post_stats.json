@@ -1,0 +1,27 @@
+{
+  "email": {
+    "recipients": 0,
+    "opens": 0,
+    "unique_opens": 0,
+    "open_rate": 0,
+    "clicks": 0,
+    "unique_clicks": 0,
+    "click_rate": 0,
+    "unsubscribes": 0,
+    "spam_reports": 0
+  },
+  "web": {
+    "views": 0,
+    "clicks": 0
+  },
+  "clicks": [
+    {
+      "url": "string",
+      "email": {},
+      "web": {},
+      "total_clicks": 10,
+      "total_unique_clicks": 8,
+      "total_click_through_rate": 30
+    }
+  ]
+}
