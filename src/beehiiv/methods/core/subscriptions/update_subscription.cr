@@ -1,13 +1,15 @@
 class Beehiiv::Subscription
   class CustomField
     getter name, value, delete
+
     def initialize(@name : String, @value : String = "", @delete : Bool = false)
     end
   end
+
   def self.update(
     publication_id : String,
     id : String,
-    unsubscribe : Bool  = false,
+    unsubscribe : Bool = false,
     custom_fields : Hash(String, String | Bool)? = nil
   ) : Object(Subscription) forall T, U
     io = IO::Memory.new
