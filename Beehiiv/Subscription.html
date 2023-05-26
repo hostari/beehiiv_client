@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Crystal Docs 1.7.3">
-<meta name="crystal_docs.project_version" content="0.1.0">
+<meta name="crystal_docs.project_version" content="0.2.0">
 <meta name="crystal_docs.project_name" content="beehiiv">
 
 
@@ -13,7 +13,7 @@
 <script type="text/javascript" src="../js/doc.js"></script>
 
   <meta name="repository-name" content="beehiiv">
-  <title>Beehiiv::Subscription - beehiiv 0.1.0</title>
+  <title>Beehiiv::Subscription - beehiiv 0.2.0</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../";
   </script>
@@ -39,7 +39,7 @@
       </h1>
 
       <span class="project-version">
-        0.1.0
+        0.2.0
       </span>
     </div>
   </div>
@@ -438,12 +438,12 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#create%28publication_id%3AString%2Cemail%3AString%2Creactivate_existing%3ABool%3Dfalse%2Csend_welcome_email%3ABool%3Dfalse%2Cutm_source%3AString%7CNil%3Dnil%2Cutm_medium%3AString%7CNil%3Dnil%2Cutm_campaign%3AString%7CNil%3Dnil%2Creferring_site%3AString%7CNil%3Dnil%2Creferral_code%3AString%7CNil%3Dnil%2Ccustom_fields%3AArray%28CustomField%29%7CNil%3Dnil%29%3AObject%28Subscription%29forallT%2CU-class-method" class="signature"><strong>.create</strong>(publication_id : String, email : String, reactivate_existing : Bool = <span class="n">false</span>, send_welcome_email : Bool = <span class="n">false</span>, utm_source : String | Nil = <span class="n">nil</span>, utm_medium : String | Nil = <span class="n">nil</span>, utm_campaign : String | Nil = <span class="n">nil</span>, referring_site : String | Nil = <span class="n">nil</span>, referral_code : String | Nil = <span class="n">nil</span>, custom_fields : Array(CustomField) | Nil = <span class="n">nil</span>) : Object(Subscription) forall T, U</a>
+        <a href="#create%28client%3AHTTP%3A%3AClient%2Cpublication_id%3AString%2Cemail%3AString%2Creactivate_existing%3ABool%3Dfalse%2Csend_welcome_email%3ABool%3Dfalse%2Cutm_source%3AString%7CNil%3Dnil%2Cutm_medium%3AString%7CNil%3Dnil%2Cutm_campaign%3AString%7CNil%3Dnil%2Creferring_site%3AString%7CNil%3Dnil%2Creferral_code%3AString%7CNil%3Dnil%2Ccustom_fields%3AArray%28CustomField%29%7CNil%3Dnil%29%3AObject%28Subscription%29forallT%2CU-class-method" class="signature"><strong>.create</strong>(client : HTTP::Client, publication_id : String, email : String, reactivate_existing : Bool = <span class="n">false</span>, send_welcome_email : Bool = <span class="n">false</span>, utm_source : String | Nil = <span class="n">nil</span>, utm_medium : String | Nil = <span class="n">nil</span>, utm_campaign : String | Nil = <span class="n">nil</span>, referring_site : String | Nil = <span class="n">nil</span>, referral_code : String | Nil = <span class="n">nil</span>, custom_fields : Array(CustomField) | Nil = <span class="n">nil</span>) : Object(Subscription) forall T, U</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#delete%28publication_id%3AString%2Cid%3AString%29-class-method" class="signature"><strong>.delete</strong>(publication_id : String, id : String)</a>
+        <a href="#delete%28client%3AHTTP%3A%3AClient%2Cpublication_id%3AString%2Cid%3AString%29-class-method" class="signature"><strong>.delete</strong>(client : HTTP::Client, publication_id : String, id : String)</a>
         
       </li>
     
@@ -453,12 +453,12 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#list%28publication_id%3AString%29%3AList%28Beehiiv%3A%3ASubscription%29-class-method" class="signature"><strong>.list</strong>(publication_id : String) : List(Beehiiv::Subscription)</a>
+        <a href="#list%28client%3AHTTP%3A%3AClient%2Cpublication_id%3AString%29%3AList%28Beehiiv%3A%3ASubscription%29-class-method" class="signature"><strong>.list</strong>(client : HTTP::Client, publication_id : String) : List(Beehiiv::Subscription)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#retrieve%28publication_id%3AString%2Cid%3AString%29%3AObject%28Beehiiv%3A%3ASubscription%29-class-method" class="signature"><strong>.retrieve</strong>(publication_id : String, id : String) : Object(Beehiiv::Subscription)</a>
+        <a href="#retrieve%28client%3AHTTP%3A%3AClient%2Cpublication_id%3AString%2Cid%3AString%29%3AObject%28Beehiiv%3A%3ASubscription%29-class-method" class="signature"><strong>.retrieve</strong>(client : HTTP::Client, publication_id : String, id : String) : Object(Beehiiv::Subscription)</a>
         
       </li>
     
@@ -468,7 +468,7 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#update%28publication_id%3AString%2Cid%3AString%2Cunsubscribe%3ABool%3Dfalse%2Ccustom_fields%3AHash%28String%2CString%7CBool%29%7CNil%3Dnil%29%3AObject%28Subscription%29forallT%2CU-class-method" class="signature"><strong>.update</strong>(publication_id : String, id : String, unsubscribe : Bool = <span class="n">false</span>, custom_fields : Hash(String, String | Bool) | Nil = <span class="n">nil</span>) : Object(Subscription) forall T, U</a>
+        <a href="#update%28client%3AHTTP%3A%3AClient%2Cpublication_id%3AString%2Cid%3AString%2Cunsubscribe%3ABool%3Dfalse%2Ccustom_fields%3AHash%28String%2CString%7CBool%29%7CNil%3Dnil%29%3AObject%28Subscription%29forallT%2CU-class-method" class="signature"><strong>.update</strong>(client : HTTP::Client, publication_id : String, id : String, unsubscribe : Bool = <span class="n">false</span>, custom_fields : Hash(String, String | Bool) | Nil = <span class="n">nil</span>) : Object(Subscription) forall T, U</a>
         
       </li>
     
@@ -627,12 +627,12 @@
     Class Method Detail
   </h2>
   
-    <div class="entry-detail" id="create(publication_id:String,email:String,reactivate_existing:Bool=false,send_welcome_email:Bool=false,utm_source:String|Nil=nil,utm_medium:String|Nil=nil,utm_campaign:String|Nil=nil,referring_site:String|Nil=nil,referral_code:String|Nil=nil,custom_fields:Array(CustomField)|Nil=nil):Object(Subscription)forallT,U-class-method">
+    <div class="entry-detail" id="create(client:HTTP::Client,publication_id:String,email:String,reactivate_existing:Bool=false,send_welcome_email:Bool=false,utm_source:String|Nil=nil,utm_medium:String|Nil=nil,utm_campaign:String|Nil=nil,referring_site:String|Nil=nil,referral_code:String|Nil=nil,custom_fields:Array(CustomField)|Nil=nil):Object(Subscription)forallT,U-class-method">
       <div class="signature">
         
-        def self.<strong>create</strong>(publication_id : String, email : String, reactivate_existing : Bool = <span class="n">false</span>, send_welcome_email : Bool = <span class="n">false</span>, utm_source : String | Nil = <span class="n">nil</span>, utm_medium : String | Nil = <span class="n">nil</span>, utm_campaign : String | Nil = <span class="n">nil</span>, referring_site : String | Nil = <span class="n">nil</span>, referral_code : String | Nil = <span class="n">nil</span>, custom_fields : Array(<a href="../Beehiiv/Subscription/CustomField.html">CustomField</a>) | Nil = <span class="n">nil</span>) : <a href="../Beehiiv/Object.html">Object</a>(<a href="../Beehiiv/Subscription.html">Subscription</a>) forall T, U
+        def self.<strong>create</strong>(client : HTTP::Client, publication_id : String, email : String, reactivate_existing : Bool = <span class="n">false</span>, send_welcome_email : Bool = <span class="n">false</span>, utm_source : String | Nil = <span class="n">nil</span>, utm_medium : String | Nil = <span class="n">nil</span>, utm_campaign : String | Nil = <span class="n">nil</span>, referring_site : String | Nil = <span class="n">nil</span>, referral_code : String | Nil = <span class="n">nil</span>, custom_fields : Array(<a href="../Beehiiv/Subscription/CustomField.html">CustomField</a>) | Nil = <span class="n">nil</span>) : <a href="../Beehiiv/Object.html">Object</a>(<a href="../Beehiiv/Subscription.html">Subscription</a>) forall T, U
 
-        <a class="method-permalink" href="#create%28publication_id%3AString%2Cemail%3AString%2Creactivate_existing%3ABool%3Dfalse%2Csend_welcome_email%3ABool%3Dfalse%2Cutm_source%3AString%7CNil%3Dnil%2Cutm_medium%3AString%7CNil%3Dnil%2Cutm_campaign%3AString%7CNil%3Dnil%2Creferring_site%3AString%7CNil%3Dnil%2Creferral_code%3AString%7CNil%3Dnil%2Ccustom_fields%3AArray%28CustomField%29%7CNil%3Dnil%29%3AObject%28Subscription%29forallT%2CU-class-method">#</a>
+        <a class="method-permalink" href="#create%28client%3AHTTP%3A%3AClient%2Cpublication_id%3AString%2Cemail%3AString%2Creactivate_existing%3ABool%3Dfalse%2Csend_welcome_email%3ABool%3Dfalse%2Cutm_source%3AString%7CNil%3Dnil%2Cutm_medium%3AString%7CNil%3Dnil%2Cutm_campaign%3AString%7CNil%3Dnil%2Creferring_site%3AString%7CNil%3Dnil%2Creferral_code%3AString%7CNil%3Dnil%2Ccustom_fields%3AArray%28CustomField%29%7CNil%3Dnil%29%3AObject%28Subscription%29forallT%2CU-class-method">#</a>
       </div>
       
       <br/>
@@ -641,12 +641,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="delete(publication_id:String,id:String)-class-method">
+    <div class="entry-detail" id="delete(client:HTTP::Client,publication_id:String,id:String)-class-method">
       <div class="signature">
         
-        def self.<strong>delete</strong>(publication_id : String, id : String)
+        def self.<strong>delete</strong>(client : HTTP::Client, publication_id : String, id : String)
 
-        <a class="method-permalink" href="#delete%28publication_id%3AString%2Cid%3AString%29-class-method">#</a>
+        <a class="method-permalink" href="#delete%28client%3AHTTP%3A%3AClient%2Cpublication_id%3AString%2Cid%3AString%29-class-method">#</a>
       </div>
       
       <br/>
@@ -669,12 +669,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="list(publication_id:String):List(Beehiiv::Subscription)-class-method">
+    <div class="entry-detail" id="list(client:HTTP::Client,publication_id:String):List(Beehiiv::Subscription)-class-method">
       <div class="signature">
         
-        def self.<strong>list</strong>(publication_id : String) : <a href="../Beehiiv/List.html">List</a>(<a href="../Beehiiv/Subscription.html">Beehiiv::Subscription</a>)
+        def self.<strong>list</strong>(client : HTTP::Client, publication_id : String) : <a href="../Beehiiv/List.html">List</a>(<a href="../Beehiiv/Subscription.html">Beehiiv::Subscription</a>)
 
-        <a class="method-permalink" href="#list%28publication_id%3AString%29%3AList%28Beehiiv%3A%3ASubscription%29-class-method">#</a>
+        <a class="method-permalink" href="#list%28client%3AHTTP%3A%3AClient%2Cpublication_id%3AString%29%3AList%28Beehiiv%3A%3ASubscription%29-class-method">#</a>
       </div>
       
       <br/>
@@ -683,12 +683,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="retrieve(publication_id:String,id:String):Object(Beehiiv::Subscription)-class-method">
+    <div class="entry-detail" id="retrieve(client:HTTP::Client,publication_id:String,id:String):Object(Beehiiv::Subscription)-class-method">
       <div class="signature">
         
-        def self.<strong>retrieve</strong>(publication_id : String, id : String) : <a href="../Beehiiv/Object.html">Object</a>(<a href="../Beehiiv/Subscription.html">Beehiiv::Subscription</a>)
+        def self.<strong>retrieve</strong>(client : HTTP::Client, publication_id : String, id : String) : <a href="../Beehiiv/Object.html">Object</a>(<a href="../Beehiiv/Subscription.html">Beehiiv::Subscription</a>)
 
-        <a class="method-permalink" href="#retrieve%28publication_id%3AString%2Cid%3AString%29%3AObject%28Beehiiv%3A%3ASubscription%29-class-method">#</a>
+        <a class="method-permalink" href="#retrieve%28client%3AHTTP%3A%3AClient%2Cpublication_id%3AString%2Cid%3AString%29%3AObject%28Beehiiv%3A%3ASubscription%29-class-method">#</a>
       </div>
       
       <br/>
@@ -711,12 +711,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="update(publication_id:String,id:String,unsubscribe:Bool=false,custom_fields:Hash(String,String|Bool)|Nil=nil):Object(Subscription)forallT,U-class-method">
+    <div class="entry-detail" id="update(client:HTTP::Client,publication_id:String,id:String,unsubscribe:Bool=false,custom_fields:Hash(String,String|Bool)|Nil=nil):Object(Subscription)forallT,U-class-method">
       <div class="signature">
         
-        def self.<strong>update</strong>(publication_id : String, id : String, unsubscribe : Bool = <span class="n">false</span>, custom_fields : Hash(String, String | Bool) | Nil = <span class="n">nil</span>) : <a href="../Beehiiv/Object.html">Object</a>(<a href="../Beehiiv/Subscription.html">Subscription</a>) forall T, U
+        def self.<strong>update</strong>(client : HTTP::Client, publication_id : String, id : String, unsubscribe : Bool = <span class="n">false</span>, custom_fields : Hash(String, String | Bool) | Nil = <span class="n">nil</span>) : <a href="../Beehiiv/Object.html">Object</a>(<a href="../Beehiiv/Subscription.html">Subscription</a>) forall T, U
 
-        <a class="method-permalink" href="#update%28publication_id%3AString%2Cid%3AString%2Cunsubscribe%3ABool%3Dfalse%2Ccustom_fields%3AHash%28String%2CString%7CBool%29%7CNil%3Dnil%29%3AObject%28Subscription%29forallT%2CU-class-method">#</a>
+        <a class="method-permalink" href="#update%28client%3AHTTP%3A%3AClient%2Cpublication_id%3AString%2Cid%3AString%2Cunsubscribe%3ABool%3Dfalse%2Ccustom_fields%3AHash%28String%2CString%7CBool%29%7CNil%3Dnil%29%3AObject%28Subscription%29forallT%2CU-class-method">#</a>
       </div>
       
       <br/>

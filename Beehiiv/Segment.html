@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Crystal Docs 1.7.3">
-<meta name="crystal_docs.project_version" content="0.1.0">
+<meta name="crystal_docs.project_version" content="0.2.0">
 <meta name="crystal_docs.project_name" content="beehiiv">
 
 
@@ -13,7 +13,7 @@
 <script type="text/javascript" src="../js/doc.js"></script>
 
   <meta name="repository-name" content="beehiiv">
-  <title>Beehiiv::Segment - beehiiv 0.1.0</title>
+  <title>Beehiiv::Segment - beehiiv 0.2.0</title>
   <script type="text/javascript">
     CrystalDocs.base_path = "../";
   </script>
@@ -39,7 +39,7 @@
       </h1>
 
       <span class="project-version">
-        0.1.0
+        0.2.0
       </span>
     </div>
   </div>
@@ -428,7 +428,7 @@
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#delete%28publication_id%3AString%2Cid%3AString%29-class-method" class="signature"><strong>.delete</strong>(publication_id : String, id : String)</a>
+        <a href="#delete%28client%3AHTTP%3A%3AClient%2Cpublication_id%3AString%2Cid%3AString%29-class-method" class="signature"><strong>.delete</strong>(client : HTTP::Client, publication_id : String, id : String)</a>
         
       </li>
     
@@ -438,17 +438,17 @@
       </li>
     
       <li class="entry-summary">
-        <a href="#expand_results%28publication_id%3AString%2Cid%3AString%29-class-method" class="signature"><strong>.expand_results</strong>(publication_id : String, id : String)</a>
+        <a href="#expand_results%28client%3AHTTP%3A%3AClient%2Cpublication_id%3AString%2Cid%3AString%29-class-method" class="signature"><strong>.expand_results</strong>(client : HTTP::Client, publication_id : String, id : String)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#list%28publication_id%3AString%29%3AList%28Beehiiv%3A%3ASegment%29-class-method" class="signature"><strong>.list</strong>(publication_id : String) : List(Beehiiv::Segment)</a>
+        <a href="#list%28client%3AHTTP%3A%3AClient%2Cpublication_id%3AString%29%3AList%28Beehiiv%3A%3ASegment%29-class-method" class="signature"><strong>.list</strong>(client : HTTP::Client, publication_id : String) : List(Beehiiv::Segment)</a>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#retrieve%28publication_id%3AString%2Cid%3AString%29%3AObject%28Beehiiv%3A%3ASegment%29-class-method" class="signature"><strong>.retrieve</strong>(publication_id : String, id : String) : Object(Beehiiv::Segment)</a>
+        <a href="#retrieve%28client%3AHTTP%3A%3AClient%2Cpublication_id%3AString%2Cid%3AString%29%3AObject%28Beehiiv%3A%3ASegment%29-class-method" class="signature"><strong>.retrieve</strong>(client : HTTP::Client, publication_id : String, id : String) : Object(Beehiiv::Segment)</a>
         
       </li>
     
@@ -592,12 +592,12 @@
     Class Method Detail
   </h2>
   
-    <div class="entry-detail" id="delete(publication_id:String,id:String)-class-method">
+    <div class="entry-detail" id="delete(client:HTTP::Client,publication_id:String,id:String)-class-method">
       <div class="signature">
         
-        def self.<strong>delete</strong>(publication_id : String, id : String)
+        def self.<strong>delete</strong>(client : HTTP::Client, publication_id : String, id : String)
 
-        <a class="method-permalink" href="#delete%28publication_id%3AString%2Cid%3AString%29-class-method">#</a>
+        <a class="method-permalink" href="#delete%28client%3AHTTP%3A%3AClient%2Cpublication_id%3AString%2Cid%3AString%29-class-method">#</a>
       </div>
       
       <br/>
@@ -620,12 +620,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="expand_results(publication_id:String,id:String)-class-method">
+    <div class="entry-detail" id="expand_results(client:HTTP::Client,publication_id:String,id:String)-class-method">
       <div class="signature">
         
-        def self.<strong>expand_results</strong>(publication_id : String, id : String)
+        def self.<strong>expand_results</strong>(client : HTTP::Client, publication_id : String, id : String)
 
-        <a class="method-permalink" href="#expand_results%28publication_id%3AString%2Cid%3AString%29-class-method">#</a>
+        <a class="method-permalink" href="#expand_results%28client%3AHTTP%3A%3AClient%2Cpublication_id%3AString%2Cid%3AString%29-class-method">#</a>
       </div>
       
       <br/>
@@ -634,12 +634,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="list(publication_id:String):List(Beehiiv::Segment)-class-method">
+    <div class="entry-detail" id="list(client:HTTP::Client,publication_id:String):List(Beehiiv::Segment)-class-method">
       <div class="signature">
         
-        def self.<strong>list</strong>(publication_id : String) : <a href="../Beehiiv/List.html">List</a>(<a href="../Beehiiv/Segment.html">Beehiiv::Segment</a>)
+        def self.<strong>list</strong>(client : HTTP::Client, publication_id : String) : <a href="../Beehiiv/List.html">List</a>(<a href="../Beehiiv/Segment.html">Beehiiv::Segment</a>)
 
-        <a class="method-permalink" href="#list%28publication_id%3AString%29%3AList%28Beehiiv%3A%3ASegment%29-class-method">#</a>
+        <a class="method-permalink" href="#list%28client%3AHTTP%3A%3AClient%2Cpublication_id%3AString%29%3AList%28Beehiiv%3A%3ASegment%29-class-method">#</a>
       </div>
       
       <br/>
@@ -648,12 +648,12 @@
       </div>
     </div>
   
-    <div class="entry-detail" id="retrieve(publication_id:String,id:String):Object(Beehiiv::Segment)-class-method">
+    <div class="entry-detail" id="retrieve(client:HTTP::Client,publication_id:String,id:String):Object(Beehiiv::Segment)-class-method">
       <div class="signature">
         
-        def self.<strong>retrieve</strong>(publication_id : String, id : String) : <a href="../Beehiiv/Object.html">Object</a>(<a href="../Beehiiv/Segment.html">Beehiiv::Segment</a>)
+        def self.<strong>retrieve</strong>(client : HTTP::Client, publication_id : String, id : String) : <a href="../Beehiiv/Object.html">Object</a>(<a href="../Beehiiv/Segment.html">Beehiiv::Segment</a>)
 
-        <a class="method-permalink" href="#retrieve%28publication_id%3AString%2Cid%3AString%29%3AObject%28Beehiiv%3A%3ASegment%29-class-method">#</a>
+        <a class="method-permalink" href="#retrieve%28client%3AHTTP%3A%3AClient%2Cpublication_id%3AString%2Cid%3AString%29%3AObject%28Beehiiv%3A%3ASegment%29-class-method">#</a>
       </div>
       
       <br/>
