@@ -7,7 +7,8 @@ describe Beehiiv::Post do
     WebMock.stub(:get, "https://api.beehiiv.com/v2/publications/#{publication_id}/posts")
       .to_return(status: 200, body: File.read("spec/support/posts_index.json"), headers: {"Content-Type" => "application/json"})
 
-    posts = Beehiiv::Post.list(publication_id)
+    client = Beehiiv.client
+    posts = Beehiiv::Post.list(client, publication_id)
     posts.first.id.should eq(post_id)
   end
 
@@ -17,7 +18,8 @@ describe Beehiiv::Post do
     WebMock.stub(:get, "https://api.beehiiv.com/v2/publications/#{publication_id}/posts/#{post_id}")
       .to_return(status: 200, body: File.read("spec/support/posts_show.json"), headers: {"Content-Type" => "application/json"})
 
-    post = Beehiiv::Post.retrieve(publication_id, id: post_id).data
+    client = Beehiiv.client
+    post = Beehiiv::Post.retrieve(client, publication_id, id: post_id).data
     post.id.should eq(post_id)
   end
 
@@ -28,7 +30,8 @@ describe Beehiiv::Post do
     WebMock.stub(:delete, "https://api.beehiiv.com/v2/publications/#{publication_id}/posts/#{post_id}")
       .to_return(status: 204, body: "", headers: {"Content-Type" => "application/json"})
 
-    response = Beehiiv::Post.delete(publication_id, id: post_id)
+    client = Beehiiv.client
+    response = Beehiiv::Post.delete(client, publication_id, id: post_id)
     response.should eq(true)
   end
 end

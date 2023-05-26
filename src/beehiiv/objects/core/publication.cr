@@ -2,8 +2,8 @@
 class Beehiiv::Publication
   include JSON::Serializable
 
-  def self.retrieve(id : String)
-    response = Beehiiv.client.get("/v2/publications/#{id}")
+  def self.retrieve(client : HTTP::Client, id : String)
+    response = client.get("/v2/publications/#{id}")
 
     if response.status_code == 200
       Object(Beehiiv::Publication).from_json(response.body)
@@ -12,8 +12,8 @@ class Beehiiv::Publication
     end
   end
 
-  def self.list
-    response = Beehiiv.client.get("/v2/publications")
+  def self.list(client : HTTP::Client)
+    response = client.get("/v2/publications")
 
     if response.status_code == 200
       List(Beehiiv::Publication).from_json(response.body)

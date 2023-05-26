@@ -2,8 +2,8 @@
 class Beehiiv::ReferralProgram
   include JSON::Serializable
 
-  def self.retrieve(id : String)
-    response = Beehiiv.client.get("/v2/publications/#{id}/referral_program")
+  def self.retrieve(client : HTTP::Client, id : String)
+    response = client.get("/v2/publications/#{id}/referral_program")
 
     if response.status_code == 200
       List(Beehiiv::ReferralProgram).from_json(response.body)

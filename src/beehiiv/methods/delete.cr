@@ -3,8 +3,8 @@ module BeehiivMethods
 
   macro add_delete_method
 {% begin %}
-  def self.delete(publication_id : String, id : String)
-    response = Beehiiv.client.delete("/v2/publications/#{publication_id}/#{"{{@type.id.gsub(/Beehiiv::/, "").underscore.gsub(/::/, "/")}}"}s/#{id}")
+  def self.delete(client : HTTP::Client, publication_id : String, id : String)
+    response = client.delete("/v2/publications/#{publication_id}/#{"{{@type.id.gsub(/Beehiiv::/, "").underscore.gsub(/::/, "/")}}"}s/#{id}")
 
     if response.status_code == 204
       true

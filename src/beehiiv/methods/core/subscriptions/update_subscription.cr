@@ -7,6 +7,7 @@ class Beehiiv::Subscription
   end
 
   def self.update(
+    client : HTTP::Client,
     publication_id : String,
     id : String,
     unsubscribe : Bool = false,
@@ -19,7 +20,7 @@ class Beehiiv::Subscription
       builder.add({{x}}, {{x.id}}) unless {{x.id}}.nil?
     {% end %}
 
-    response = Beehiiv.client.patch("/v2/publications/#{publication_id}/subscriptions/#{id}", form: io.to_s)
+    response = client.patch("/v2/publications/#{publication_id}/subscriptions/#{id}", form: io.to_s)
 
     if response.status_code == 200
       Object(Subscription).from_json(response.body)
