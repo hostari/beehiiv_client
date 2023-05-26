@@ -6,7 +6,9 @@ describe Beehiiv::Subscription do
     WebMock.stub(:post, "https://api.beehiiv.com/v2/publications/#{publication_id}/subscriptions")
       .to_return(status: 200, body: File.read("spec/support/subscriptions_create.json"), headers: {"Content-Type" => "application/json"})
 
+    client = Beehiiv.client
     subscription = Beehiiv::Subscription.create(
+      client,
       publication_id,
       email: "example@example.com",
       reactivate_existing: false,
@@ -25,7 +27,8 @@ describe Beehiiv::Subscription do
     WebMock.stub(:get, "https://api.beehiiv.com/v2/publications/#{publication_id}/subscriptions")
       .to_return(status: 200, body: File.read("spec/support/subscriptions_index.json"), headers: {"Content-Type" => "application/json"})
 
-    subscriptions = Beehiiv::Subscription.list(publication_id)
+    client = Beehiiv.client
+    subscriptions = Beehiiv::Subscription.list(client, publication_id)
     subscriptions.first.id.should eq("sub_00000000-0000-0000-0000-000000000000")
   end
   it "retrieves a single subscription belonging to a specific publication" do
@@ -34,7 +37,8 @@ describe Beehiiv::Subscription do
     WebMock.stub(:get, "https://api.beehiiv.com/v2/publications/#{publication_id}/subscriptions/#{subscription_id}")
       .to_return(status: 200, body: File.read("spec/support/subscriptions_show.json"), headers: {"Content-Type" => "application/json"})
 
-    subscription = Beehiiv::Subscription.retrieve(publication_id, id: subscription_id).data
+    client = Beehiiv.client
+    subscription = Beehiiv::Subscription.retrieve(client, publication_id, id: subscription_id).data
     subscription.id.should eq(subscription_id)
   end
   it "updates a subscriber" do
@@ -43,7 +47,8 @@ describe Beehiiv::Subscription do
     WebMock.stub(:patch, "https://api.beehiiv.com/v2/publications/#{publication_id}/subscriptions/#{subscription_id}")
       .to_return(status: 200, body: File.read("spec/support/subscriptions_patch.json"), headers: {"Content-Type" => "application/json"})
 
-    subscription = Beehiiv::Subscription.update(publication_id, id: subscription_id).data
+    client = Beehiiv.client
+    subscription = Beehiiv::Subscription.update(client, publication_id, id: subscription_id).data
     subscription.id.should eq(subscription_id)
   end
   it "deletes a subscriber" do
@@ -52,7 +57,8 @@ describe Beehiiv::Subscription do
     WebMock.stub(:delete, "https://api.beehiiv.com/v2/publications/#{publication_id}/subscriptions/#{subscription_id}")
       .to_return(status: 204, body: "", headers: {"Content-Type" => "application/json"})
 
-    response = Beehiiv::Subscription.delete(publication_id, id: subscription_id)
+    client = Beehiiv.client
+    response = Beehiiv::Subscription.delete(client, publication_id, id: subscription_id)
     response.should eq(true)
   end
 end

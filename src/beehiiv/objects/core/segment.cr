@@ -9,8 +9,8 @@ class Beehiiv::Segment
   add_list_method
   add_delete_method
 
-  def self.expand_results(publication_id : String, id : String)
-    response = Beehiiv.client.get("/v2/publications/#{publication_id}/segments/#{id}/results")
+  def self.expand_results(client : HTTP::Client, publication_id : String, id : String)
+    response = client.get("/v2/publications/#{publication_id}/segments/#{id}/results")
 
     if response.status_code == 200
       List(String).from_json(response.body)

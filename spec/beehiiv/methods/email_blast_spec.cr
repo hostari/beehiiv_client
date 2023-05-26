@@ -7,7 +7,8 @@ describe Beehiiv::EmailBlast do
     WebMock.stub(:get, "https://api.beehiiv.com/v2/publications/#{publication_id}/email_blasts")
       .to_return(status: 200, body: File.read("spec/support/email_blasts_index.json"), headers: {"Content-Type" => "application/json"})
 
-    email_blasts = Beehiiv::EmailBlast.list(publication_id)
+    client = Beehiiv.client
+    email_blasts = Beehiiv::EmailBlast.list(client, publication_id)
     email_blasts.first.id.should eq(email_blast_id)
   end
 
@@ -17,7 +18,8 @@ describe Beehiiv::EmailBlast do
     WebMock.stub(:get, "https://api.beehiiv.com/v2/publications/#{publication_id}/email_blasts/#{email_blast_id}") # ?expand%5B%5D=stats&expand%5B%5D=free_email_content&expand%5B%5D=premium_email_content
       .to_return(status: 200, body: File.read("spec/support/email_blasts_show.json"), headers: {"Content-Type" => "application/json"})
 
-    email_blast = Beehiiv::EmailBlast.retrieve(publication_id, id: email_blast_id).data
+    client = Beehiiv.client
+    email_blast = Beehiiv::EmailBlast.retrieve(client, publication_id, id: email_blast_id).data
     email_blast.id.should eq(email_blast_id)
   end
 end
