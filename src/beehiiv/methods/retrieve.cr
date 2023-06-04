@@ -4,7 +4,8 @@ module BeehiivMethods
   macro add_retrieve_method(*arguments)
 {% begin %}
   def self.retrieve(client : HTTP::Client, publication_id : String, {{*arguments}}) : Object({{@type.id}})
-    response = client.get("/v2/publications/#{publication_id}/#{"{{@type.id.gsub(/Beehiiv::/, "").underscore.gsub(/::/, "/")}}"}s/#{id}")
+    body = { "expand" => "stats" }.to_json
+    response = client.get("/v2/publications/#{publication_id}/#{"{{@type.id.gsub(/Beehiiv::/, "").underscore.gsub(/::/, "/")}}"}s/#{id}", body: body)
 
     if response.status_code == 200
       Object({{@type.id}}).from_json(response.body)
