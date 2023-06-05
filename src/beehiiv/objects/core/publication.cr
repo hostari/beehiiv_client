@@ -5,8 +5,6 @@ class Beehiiv::Publication
   def self.retrieve(client : HTTP::Client, id : String)
     response = client.get("/v2/publications/#{id}?expand=stats")
 
-    puts response.body
-
     if response.status_code == 200
       Object(Beehiiv::Publication).from_json(response.body)
     else
