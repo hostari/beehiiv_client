@@ -11,7 +11,7 @@ describe Beehiiv::Publication do
   end
   it "retrieves a single publication associated with your API key" do
     id = "pub_00000000-0000-0000-0000-000000000000"
-    WebMock.stub(:get, "https://api.beehiiv.com/v2/publications/#{id}")
+    WebMock.stub(:get, "https://api.beehiiv.com/v2/publications/#{id}?expand=stats")
       .to_return(status: 200, body: File.read("spec/support/publications_show.json"), headers: {"Content-Type" => "application/json"})
 
     client = Beehiiv.client
@@ -21,7 +21,7 @@ describe Beehiiv::Publication do
 
   it "retrieves a single publication associated with your API key with expanded data for stats" do
     id = "pub_00000000-0000-0000-0000-000000000000"
-    WebMock.stub(:get, "https://api.beehiiv.com/v2/publications/#{id}")
+    WebMock.stub(:get, "https://api.beehiiv.com/v2/publications/#{id}?expand=stats")
       .to_return(status: 200, body: File.read("spec/support/publications_show_with_stats.json"), headers: {"Content-Type" => "application/json"})
 
     client = Beehiiv.client
