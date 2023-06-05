@@ -15,7 +15,7 @@ describe Beehiiv::Post do
   it "retrieves a Post belonging to a specific publication" do
     publication_id = "pub_00000000-0000-0000-0000-000000000000"
     post_id = "post_00000000-0000-0000-0000-000000000000"
-    WebMock.stub(:get, "https://api.beehiiv.com/v2/publications/#{publication_id}/posts/#{post_id}")
+    WebMock.stub(:get, "https://api.beehiiv.com/v2/publications/#{publication_id}/posts/#{post_id}?expand=stats")
       .to_return(status: 200, body: File.read("spec/support/posts_show.json"), headers: {"Content-Type" => "application/json"})
 
     client = Beehiiv.client

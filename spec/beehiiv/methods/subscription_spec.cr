@@ -34,7 +34,7 @@ describe Beehiiv::Subscription do
   it "retrieves a single subscription belonging to a specific publication" do
     publication_id = "pub_00000000-0000-0000-0000-000000000000"
     subscription_id = "sub_00000000-0000-0000-0000-000000000000"
-    WebMock.stub(:get, "https://api.beehiiv.com/v2/publications/#{publication_id}/subscriptions/#{subscription_id}")
+    WebMock.stub(:get, "https://api.beehiiv.com/v2/publications/#{publication_id}/subscriptions/#{subscription_id}?expand=stats")
       .to_return(status: 200, body: File.read("spec/support/subscriptions_show.json"), headers: {"Content-Type" => "application/json"})
 
     client = Beehiiv.client

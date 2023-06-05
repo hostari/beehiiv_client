@@ -15,7 +15,7 @@ describe Beehiiv::EmailBlast do
   it "retrieves an Email Blast belonging to a specific publication" do
     publication_id = "pub_00000000-0000-0000-0000-000000000000"
     email_blast_id = "blast_00000000-0000-0000-0000-000000000000"
-    WebMock.stub(:get, "https://api.beehiiv.com/v2/publications/#{publication_id}/email_blasts/#{email_blast_id}") # ?expand%5B%5D=stats&expand%5B%5D=free_email_content&expand%5B%5D=premium_email_content
+    WebMock.stub(:get, "https://api.beehiiv.com/v2/publications/#{publication_id}/email_blasts/#{email_blast_id}?expand=stats") # ?expand%5B%5D=stats&expand%5B%5D=free_email_content&expand%5B%5D=premium_email_content
       .to_return(status: 200, body: File.read("spec/support/email_blasts_show.json"), headers: {"Content-Type" => "application/json"})
 
     client = Beehiiv.client
